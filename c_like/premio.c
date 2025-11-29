@@ -1,29 +1,42 @@
 #include <stdio.h>
+#include <ctype.h> // Biblioteca para usar a função toupper
 
 int main() {
-    // Declaração das variáveis para pães (p), doces (d) e bolos (b)
+    // Declaração das variáveis
     int p, d, b;
-    int pontuacao_total;
+    int pontuacao;
+    char continuar;
 
-    // Leitura dos dados de entrada
-    scanf("%d", &p);
-    scanf("%d", &d);
-    scanf("%d", &b);
+    // INICIO DA REPETIÇÃO (Do-While)
+    // O código será executado pelo menos uma vez
+    do {
+        printf("\n--- Novo Calculo ---\n");
 
-    // Processamento: Cálculo da pontuação conforme regras
-    // Pão = 1 pt, Doce = 2 pts, Bolo = 3 pts
-    pontuacao_total = (p * 1) + (d * 2) + (b * 3);
+        // ENTRADA DE DADOS
+        printf("Digite a quantidade de paes, doces e bolos (separados por espaco): ");
+        scanf("%d %d %d", &p, &d, &b);
 
-    // Lógica de Seleção para determinar a saída
-    if (pontuacao_total >= 150) {
-        printf("B\n"); // Ganha Bolo
-    } else if (pontuacao_total >= 120) {
-        printf("D\n"); // Ganha Doce
-    } else if (pontuacao_total >= 100) {
-        printf("P\n"); // Ganha Pão
-    } else {
-        printf("N\n"); // Não ganha prêmio
-    }
+        // PROCESSAMENTO
+        // Calcula a soma total ponderada
+        pontuacao = (p * 1) + (d * 2) + (b * 3);
+
+        // SELEÇÃO (Estrutura condicional para decidir o prêmio)
+        if (pontuacao >= 150) {
+            printf("Saida: B (Bolo)\n");
+        } else if (pontuacao >= 120) {
+            printf("Saida: D (Doce)\n");
+        } else if (pontuacao >= 100) {
+            printf("Saida: P (Pao)\n");
+        } else {
+            printf("Saida: N (Sem premio)\n");
+        }
+
+        // Pergunta se o usuário quer repetir o processo
+        printf("Deseja calcular novamente? (S/N): ");
+        scanf(" %c", &continuar); // O espaço antes de %c limpa o buffer do teclado
+
+    } while (toupper(continuar) == 'S'); 
+    // FIM DA REPETIÇÃO: Se digitar 'S', volta ao início.
 
     return 0;
 }
