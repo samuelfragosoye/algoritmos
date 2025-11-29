@@ -3,6 +3,8 @@
 ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
 ![Language](https://img.shields.io/badge/Linguagens-C%20%7C%20C%2B%2B%20%7C%20C%23%20%7C%20Java%20%7C%20Python-blue)
 
+[![My Skills](https://skillicons.dev/icons?i=c,cpp,cs,java,py)](https://skillicons.dev)
+
 Este repositório contém as soluções para o problema **"Prêmio"** da Olimpíada Brasileira de Informática (OBI 2023 - Fase 1, Nível Júnior), implementado em 5 linguagens de programação diferentes.
 
 Este projeto foi desenvolvido como parte da disciplina de **Algoritmos e Estruturas de Dados**.
