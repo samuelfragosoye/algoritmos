@@ -1,29 +1,48 @@
-package c_like;
+// Se estiver numa pasta 'c_like', mantenha a linha abaixo. Se não, remova.
+package c_like; 
+
 import java.util.Scanner;
 
 public class Premio {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner leitor = new Scanner(System.in);
+        char continuar;
 
-        // Entrada de dados
-        int p = scanner.nextInt();
-        int d = scanner.nextInt();
-        int b = scanner.nextInt();
+        // INÍCIO DA REPETIÇÃO
+        do {
+            System.out.println("\n--- Avaliacao de Desempenho ---");
 
-        // Processamento
-        int pontuacao = (p * 1) + (d * 2) + (b * 3);
+            // ENTRADA DE DADOS
+            System.out.print("Qtd Paes: ");
+            int p = leitor.nextInt();
+            
+            System.out.print("Qtd Doces: ");
+            int d = leitor.nextInt();
+            
+            System.out.print("Qtd Bolos: ");
+            int b = leitor.nextInt();
 
-        // Seleção do prêmio baseada na pontuação
-        if (pontuacao >= 150) {
-            System.out.println("B");
-        } else if (pontuacao >= 120) {
-            System.out.println("D");
-        } else if (pontuacao >= 100) {
-            System.out.println("P");
-        } else {
-            System.out.println("N");
-        }
-        
-        scanner.close();
+            // PROCESSAMENTO LÓGICO
+            int pontuacao = (p * 1) + (d * 2) + (b * 3);
+
+            // ESTRUTURA DE SELEÇÃO (IF-ELSE IF-ELSE)
+            System.out.print("Premio Merecido: ");
+            if (pontuacao >= 150) {
+                System.out.println("B (Bolo)");
+            } else if (pontuacao >= 120) {
+                System.out.println("D (Doce)");
+            } else if (pontuacao >= 100) {
+                System.out.println("P (Pao)");
+            } else {
+                System.out.println("N (Nenhum)");
+            }
+
+            // Pergunta para controle do loop
+            System.out.print("Analisar outro colaborador? (S/N): ");
+            continuar = leitor.next().charAt(0);
+
+        } while (continuar == 'S' || continuar == 's');
+
+        leitor.close();
     }
 }
