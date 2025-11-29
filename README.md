@@ -5,7 +5,7 @@ Aqui concentro exercícios do livro *"Entendendo Algoritmos"* e atividade práti
 
 ## 🛠️ Linguagens Praticadas
 
-[![My Skills](https://skillicons.dev/icons?i=c,cpp,cs,java,py,vscode,linux)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=c,cpp,cs,java,py)](https://skillicons.dev)
 
 ## 📂 Organização das Pastas
 
